@@ -73,6 +73,9 @@ class UnsortedPreferences(
 
     fun exhAutoUpdateFrequency() = preferenceStore.getInt("eh_auto_update_frequency", 1)
 
+    fun disableZoomIn(): Boolean {
+        return getBoolean("disable_zoom_in", false)
+    }
     fun exhAutoUpdateRequirements() = preferenceStore.getStringSet("eh_auto_update_restrictions", emptySet())
 
     fun exhAutoUpdateStats() = preferenceStore.getString(Preference.appStateKey("eh_auto_update_stats"), "")
